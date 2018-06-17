@@ -67,6 +67,17 @@ def password_gen():
         self.platform_name = platform_name
         self.account_name = account_name
         self.account_password = account_password
+    @classmethod
+    def find_by_platform(cls,platform_name):
+        '''
+        Method that takes in a platform name and returns an account on the platform.
+
+        Args:
+            platform_name: Platform to search for
+        returns:
+            Account on that platform
+        '''
+        print ('confirm username to view accounts')
         name = input("username: ")
         for account in cls.account_list:
     def create_account(self):
