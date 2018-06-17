@@ -1,3 +1,15 @@
+def begin():
+    '''
+    This function initiates the app
+    '''
+    print ("type u to sign up as a new users \n type l to login for older users ")
+    choice = input("choice:").lower()
+    if choice == "u":
+        user.add_user()
+        begin()
+
+    elif choice == "l":
+        login()
 def login():
     print("Please enter username")
     username = input('')
