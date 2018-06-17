@@ -38,6 +38,19 @@ def login():
 
     return false
 
+def menu():
+    '''
+    Display the menu for the application
+    '''
+    print("Calls\n ca-create account\n va-view user accounts \n pgen-generate password \n ")
+    inline_calls = input("inline call: ")
+    if inline_calls == "ca":
+        account.create_account()
+    elif inline_calls == "va":
+        account.view_account()
+    elif inline_calls == "pgen":
+        account.password_gen()
+
 def password_gen():
     print("How long would you want your password to be?")
     length = input().int()
