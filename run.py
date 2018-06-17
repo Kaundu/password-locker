@@ -24,3 +24,20 @@ def password_gen():
     return password
         name = input("username: ")
         for account in cls.account_list:
+    def create_account(self):
+        print("confirm your username")
+        name = input("username: ")
+        file = open("origin.txt", "r")
+        for line in file.readlines():
+            login_info = line.split()
+            if (name in login_info):
+                print("you can now create your accounts")
+                print("Please enter the credentials of your choice")
+                account = input('Account: ')
+                account_password = input('A/c Password: ')
+                file = open(f"{name}.txt","a")
+                file.write(account)
+                file.write(" ")
+                file.write(account_password)
+                file.write("\n")
+                file.close()
