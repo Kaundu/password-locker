@@ -10,6 +10,18 @@ def begin():
 
     elif choice == "l":
         login()
+    def add_user(self):
+        print('Creating user, please choose username and password')
+        username = input('Username: ')
+        password = input('Password: ')
+
+        file = open("origin.txt","a")
+        file.write(username)
+        file.write(" ")
+        file.write(password)
+        file.write("\n")
+        file.close()
+user=User()
 def login():
     print("Please enter username")
     username = input('')
