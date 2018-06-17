@@ -22,6 +22,27 @@ def password_gen():
     alphabet = string.ascii_letters + string.digits
     password = ''.join(secrets.choice(alphabet) for i in range(length))
     return password
+    def save_account(self):
+
+        '''
+        save_account method saves account object into account_list
+        '''
+
+        Account.account_list.append(self)
+
+    def delete_account(self):
+        '''
+        delete_account method deletes a  saved account from the list
+        '''
+
+        Account.account_list.remove(self)
+
+
+    def __init__(self,platform_name,account_name,account_password):
+
+        self.platform_name = platform_name
+        self.account_name = account_name
+        self.account_password = account_password
         name = input("username: ")
         for account in cls.account_list:
     def create_account(self):
